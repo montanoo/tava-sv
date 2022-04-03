@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Windows.Forms;
 
 namespace Tava.Views
 {
@@ -8,6 +9,5 @@ namespace Tava.Views
         {
             InitializeComponent();
         }
-
     }
 }
