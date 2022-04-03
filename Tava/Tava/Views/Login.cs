@@ -25,11 +25,8 @@ namespace Tava.Views
         {
             var login = new LoginUser();
             var canLogin = login.Login(txtUser.Text, txtPassword.Text);
-            if (canLogin)
-            {
-                MessageBox.Show("Bienvenido pa");
-                this.Hide();
-            }
+            if (!canLogin) return;
+            this.Hide();
         }
 
         private void linkSignUp_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -37,6 +34,11 @@ namespace Tava.Views
             var newUser = new SignUp();
             newUser.Show();
             Hide();
+        }
+
+        private void Login_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

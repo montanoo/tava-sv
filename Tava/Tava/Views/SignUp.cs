@@ -13,10 +13,11 @@ namespace Tava.Views
 {
     public partial class SignUp : Form
     {
-        private int Id;
+        private int _id;
         public SignUp()
         {
             InitializeComponent();
+            txtName.Focus();
         }
 
         private void SignUp_FormClosed(object sender, FormClosedEventArgs e)
@@ -56,7 +57,7 @@ namespace Tava.Views
                     userData.Password = txtPassword.Text;
                     database.Users.Add(userData);
                     database.SaveChanges();
-                    Id = userData.Id;
+                    _id = userData.Id;
                 }
 
                 using (var database = new TavaContext())
@@ -64,7 +65,7 @@ namespace Tava.Views
                     //se guardan los registros en la tabla clients
                     var adminData = new Admin
                     {
-                        UserId = Id,
+                        UserId = _id,
                         Name = txtName.Text,
                         Bankaccount = txtBank.Text,
                         Companyname = "Tava",
@@ -72,7 +73,7 @@ namespace Tava.Views
                         Lastname = txtLastname.Text,
                     };
                     //relaciona el id de la tabla user con la foreign key de la tabla client
-                    adminData.UserId = Id;
+                    adminData.UserId = _id;
                     database.Admins.Add(adminData);
                     database.SaveChanges();
                 }
@@ -86,6 +87,11 @@ namespace Tava.Views
             {
                 MessageBox.Show("El nombre de usuario, DUI o correo electrónico ya ha sido registrado");
             }
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
 
         }
     }
