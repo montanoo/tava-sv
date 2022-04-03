@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 
+#nullable disable
+
 namespace Tava.Models
 {
     public partial class User
@@ -11,8 +13,8 @@ namespace Tava.Models
         }
 
         public int Id { get; set; }
-        public string Username { get; set; } = null!;
-        public string Password { get; set; } = null!;
+        public string Username { get; set; }
+        public string Password { get; set; }
 
         public virtual ICollection<Admin> Admins { get; set; }
     }

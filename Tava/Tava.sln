@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32319.34
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tava", "Tava\Tava.csproj", "{BC79F986-224F-42E5-B38A-446D310D70A3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tava", "Tava\Tava.csproj", "{4AA82711-3364-4479-A54B-12C219247CFE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{BC79F986-224F-42E5-B38A-446D310D70A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BC79F986-224F-42E5-B38A-446D310D70A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BC79F986-224F-42E5-B38A-446D310D70A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BC79F986-224F-42E5-B38A-446D310D70A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4AA82711-3364-4479-A54B-12C219247CFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AA82711-3364-4479-A54B-12C219247CFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AA82711-3364-4479-A54B-12C219247CFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AA82711-3364-4479-A54B-12C219247CFE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {3BAFD8AB-2DC6-4B41-BB33-D304FF63E393}
+		SolutionGuid = {41A43146-9795-4ED7-B074-5F58D9C1B8E9}
 	EndGlobalSection
 EndGlobal

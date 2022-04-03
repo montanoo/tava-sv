@@ -1,3 +1,5 @@
+﻿using System.Windows.Forms;
+
 namespace Tava.Views
 {
     public partial class Form1 : Form
@@ -6,5 +8,6 @@ namespace Tava.Views
         {
             InitializeComponent();
         }
+
     }
 }

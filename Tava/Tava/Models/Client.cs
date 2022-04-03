@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 
+#nullable disable
+
 namespace Tava.Models
 {
     public partial class Client
@@ -11,8 +13,8 @@ namespace Tava.Models
         }
 
         public int Id { get; set; }
-        public string Name { get; set; } = null!;
-        public string? Lastname { get; set; }
+        public string Name { get; set; }
+        public string Lastname { get; set; }
         public int? Phone { get; set; }
 
         public virtual ICollection<Billing> Billings { get; set; }

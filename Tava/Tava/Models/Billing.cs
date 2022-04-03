@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 
+#nullable disable
+
 namespace Tava.Models
 {
     public partial class Billing
@@ -14,9 +16,9 @@ namespace Tava.Models
         public double? Totalprice { get; set; }
         public int? PointofsaleId { get; set; }
 
-        public virtual Admin? Admin { get; set; }
-        public virtual Client? Client { get; set; }
-        public virtual Pointofsale? Pointofsale { get; set; }
-        public virtual Product? Product { get; set; }
+        public virtual Admin Admin { get; set; }
+        public virtual Client Client { get; set; }
+        public virtual Pointofsale Pointofsale { get; set; }
+        public virtual Product Product { get; set; }
     }
 }

@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 
+#nullable disable
+
 namespace Tava.Models
 {
     public partial class Pointofsale
@@ -11,8 +13,8 @@ namespace Tava.Models
         }
 
         public int Id { get; set; }
-        public string? Type { get; set; }
-        public string? Address { get; set; }
+        public string Type { get; set; }
+        public string Address { get; set; }
 
         public virtual ICollection<Billing> Billings { get; set; }
     }

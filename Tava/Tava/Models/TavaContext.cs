@@ -1,7 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
+
+#nullable disable
 
 namespace Tava.Models
 {
@@ -16,12 +17,12 @@ namespace Tava.Models
         {
         }
 
-        public virtual DbSet<Admin> Admins { get; set; } = null!;
-        public virtual DbSet<Billing> Billings { get; set; } = null!;
-        public virtual DbSet<Client> Clients { get; set; } = null!;
-        public virtual DbSet<Pointofsale> Pointofsales { get; set; } = null!;
-        public virtual DbSet<Product> Products { get; set; } = null!;
-        public virtual DbSet<User> Users { get; set; } = null!;
+        public virtual DbSet<Admin> Admins { get; set; }
+        public virtual DbSet<Billing> Billings { get; set; }
+        public virtual DbSet<Client> Clients { get; set; }
+        public virtual DbSet<Pointofsale> Pointofsales { get; set; }
+        public virtual DbSet<Product> Products { get; set; }
+        public virtual DbSet<User> Users { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -34,6 +35,8 @@ namespace Tava.Models
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.HasAnnotation("Relational:Collation", "SQL_Latin1_General_CP1_CI_AS");
+
             modelBuilder.Entity<Admin>(entity =>
             {
                 entity.ToTable("admin");
@@ -64,6 +67,7 @@ namespace Tava.Models
                     .HasColumnName("lastname");
 
                 entity.Property(e => e.Name)
+                    .IsRequired()
                     .HasMaxLength(255)
                     .IsUnicode(false)
                     .HasColumnName("name");
@@ -133,6 +137,7 @@ namespace Tava.Models
                     .HasColumnName("lastname");
 
                 entity.Property(e => e.Name)
+                    .IsRequired()
                     .HasMaxLength(255)
                     .IsUnicode(false)
                     .HasColumnName("name");
@@ -196,11 +201,13 @@ namespace Tava.Models
                 entity.Property(e => e.Id).HasColumnName("id");
 
                 entity.Property(e => e.Password)
+                    .IsRequired()
                     .HasMaxLength(255)
                     .IsUnicode(false)
                     .HasColumnName("password");
 
                 entity.Property(e => e.Username)
+                    .IsRequired()
                     .HasMaxLength(255)
                     .IsUnicode(false)
                     .HasColumnName("username");
