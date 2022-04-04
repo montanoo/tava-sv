@@ -12,12 +12,14 @@ namespace Tava.Forms
 {
     public partial class FormCustomers : Form
     {
+        //variables for search bar
+        public DataTable input;
+        string filterField = "Nombre";
         public FormCustomers()
         {
             InitializeComponent();
             ShowDgv();
         }
-
         public void ShowDgv()
         {
             using (var db = new Models.TavaContext())
@@ -29,5 +31,20 @@ namespace Tava.Forms
                 }
             }
         }
+
+        private void textBox1_Enter(object sender, EventArgs e)
+        {
+            textBox1.Text = "";
+        }
+
+        //searchbar
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            //no funciona, arreglar
+            //DataTable tabla = new DataTable();
+            //input = tabla;
+            //input.DefaultView.RowFilter = string.Format("[{0}] LIKE '%{1}%'", filterField, textBox1.Text);
+        }
+
     }
 }
