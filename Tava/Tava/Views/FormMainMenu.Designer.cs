@@ -39,11 +39,14 @@ namespace Tava.Views
             this.btnSalesRegistration = new System.Windows.Forms.Button();
             this.btnProductsRegistration = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelDesktopPane = new System.Windows.Forms.Panel();
             this.panelTitleBar = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
             this.btnCloseChildForm = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
+            this.panelLogo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelDesktopPane.SuspendLayout();
             this.panelTitleBar.SuspendLayout();
             this.SuspendLayout();
@@ -73,7 +76,7 @@ namespace Tava.Views
             this.btnCustomers.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnCustomers.Image = ((System.Drawing.Image)(resources.GetObject("btnCustomers.Image")));
             this.btnCustomers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCustomers.Location = new System.Drawing.Point(0, 467);
+            this.btnCustomers.Location = new System.Drawing.Point(0, 436);
             this.btnCustomers.Name = "btnCustomers";
             this.btnCustomers.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
             this.btnCustomers.Size = new System.Drawing.Size(259, 57);
@@ -92,7 +95,7 @@ namespace Tava.Views
             this.btnAddresses.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnAddresses.Image = ((System.Drawing.Image)(resources.GetObject("btnAddresses.Image")));
             this.btnAddresses.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddresses.Location = new System.Drawing.Point(0, 410);
+            this.btnAddresses.Location = new System.Drawing.Point(0, 379);
             this.btnAddresses.Name = "btnAddresses";
             this.btnAddresses.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
             this.btnAddresses.Size = new System.Drawing.Size(259, 57);
@@ -111,7 +114,7 @@ namespace Tava.Views
             this.btnSales.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnSales.Image = ((System.Drawing.Image)(resources.GetObject("btnSales.Image")));
             this.btnSales.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSales.Location = new System.Drawing.Point(0, 353);
+            this.btnSales.Location = new System.Drawing.Point(0, 322);
             this.btnSales.Name = "btnSales";
             this.btnSales.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
             this.btnSales.Size = new System.Drawing.Size(259, 57);
@@ -130,7 +133,7 @@ namespace Tava.Views
             this.btnProducts.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnProducts.Image = ((System.Drawing.Image)(resources.GetObject("btnProducts.Image")));
             this.btnProducts.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProducts.Location = new System.Drawing.Point(0, 296);
+            this.btnProducts.Location = new System.Drawing.Point(0, 265);
             this.btnProducts.Name = "btnProducts";
             this.btnProducts.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
             this.btnProducts.Size = new System.Drawing.Size(259, 57);
@@ -149,7 +152,7 @@ namespace Tava.Views
             this.btnInventories.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnInventories.Image = ((System.Drawing.Image)(resources.GetObject("btnInventories.Image")));
             this.btnInventories.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInventories.Location = new System.Drawing.Point(0, 239);
+            this.btnInventories.Location = new System.Drawing.Point(0, 208);
             this.btnInventories.Name = "btnInventories";
             this.btnInventories.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
             this.btnInventories.Size = new System.Drawing.Size(259, 57);
@@ -168,7 +171,7 @@ namespace Tava.Views
             this.btnSalesRegistration.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnSalesRegistration.Image = ((System.Drawing.Image)(resources.GetObject("btnSalesRegistration.Image")));
             this.btnSalesRegistration.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalesRegistration.Location = new System.Drawing.Point(0, 182);
+            this.btnSalesRegistration.Location = new System.Drawing.Point(0, 151);
             this.btnSalesRegistration.Name = "btnSalesRegistration";
             this.btnSalesRegistration.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
             this.btnSalesRegistration.Size = new System.Drawing.Size(259, 57);
@@ -187,7 +190,7 @@ namespace Tava.Views
             this.btnProductsRegistration.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnProductsRegistration.Image = ((System.Drawing.Image)(resources.GetObject("btnProductsRegistration.Image")));
             this.btnProductsRegistration.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProductsRegistration.Location = new System.Drawing.Point(0, 125);
+            this.btnProductsRegistration.Location = new System.Drawing.Point(0, 94);
             this.btnProductsRegistration.Name = "btnProductsRegistration";
             this.btnProductsRegistration.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
             this.btnProductsRegistration.Size = new System.Drawing.Size(259, 57);
@@ -201,11 +204,22 @@ namespace Tava.Views
             // panelLogo
             // 
             this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.panelLogo.Controls.Add(this.pictureBox1);
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(259, 125);
+            this.panelLogo.Size = new System.Drawing.Size(259, 94);
             this.panelLogo.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(86, 9);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(80, 76);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
             // 
             // panelDesktopPane
             // 
@@ -224,7 +238,7 @@ namespace Tava.Views
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitleBar.Location = new System.Drawing.Point(0, 0);
             this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(1003, 125);
+            this.panelTitleBar.Size = new System.Drawing.Size(1003, 94);
             this.panelTitleBar.TabIndex = 0;
             // 
             // lblTitle
@@ -235,7 +249,7 @@ namespace Tava.Views
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Segoe UI Variable Display", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(396, 31);
+            this.lblTitle.Location = new System.Drawing.Point(441, 9);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(131, 63);
             this.lblTitle.TabIndex = 1;
@@ -249,7 +263,7 @@ namespace Tava.Views
             this.btnCloseChildForm.Image = ((System.Drawing.Image)(resources.GetObject("btnCloseChildForm.Image")));
             this.btnCloseChildForm.Location = new System.Drawing.Point(0, 0);
             this.btnCloseChildForm.Name = "btnCloseChildForm";
-            this.btnCloseChildForm.Size = new System.Drawing.Size(94, 125);
+            this.btnCloseChildForm.Size = new System.Drawing.Size(94, 94);
             this.btnCloseChildForm.TabIndex = 0;
             this.btnCloseChildForm.UseVisualStyleBackColor = true;
             this.btnCloseChildForm.Click += new System.EventHandler(this.btnCloseChildForm_Click_1);
@@ -261,11 +275,14 @@ namespace Tava.Views
             this.ClientSize = new System.Drawing.Size(1262, 673);
             this.Controls.Add(this.panelDesktopPane);
             this.Controls.Add(this.panelMenu);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(1280, 720);
             this.MinimumSize = new System.Drawing.Size(1280, 720);
             this.Name = "FormMainMenu";
-            this.Text = "MainMenu";
+            this.Text = "Tava";
             this.panelMenu.ResumeLayout(false);
+            this.panelLogo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelDesktopPane.ResumeLayout(false);
             this.panelTitleBar.ResumeLayout(false);
             this.panelTitleBar.PerformLayout();
@@ -288,5 +305,6 @@ namespace Tava.Views
         private System.Windows.Forms.Panel panelTitleBar;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Button btnCloseChildForm;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

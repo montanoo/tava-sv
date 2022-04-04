@@ -16,5 +16,10 @@ namespace Tava.Forms
         {
             InitializeComponent();
         }
+
+        private void FormProductsRegistration_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
