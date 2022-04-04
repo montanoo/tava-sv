@@ -45,19 +45,23 @@ namespace Tava.Forms
             // 
             this.textBox1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBox1.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.textBox1.Location = new System.Drawing.Point(823, 45);
+            this.textBox1.Location = new System.Drawing.Point(976, 52);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(125, 30);
+            this.textBox1.Size = new System.Drawing.Size(127, 34);
             this.textBox1.TabIndex = 6;
             this.textBox1.Text = "Buscar...";
+            this.textBox1.Click += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(654, 42);
+            this.label1.Location = new System.Drawing.Point(802, 52);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(122, 46);
+            this.label1.Size = new System.Drawing.Size(141, 56);
             this.label1.TabIndex = 5;
             this.label1.Text = "Descripción de\r\nproductos:";
             // 
@@ -69,11 +73,12 @@ namespace Tava.Forms
             this.Column1,
             this.Column2,
             this.Column3});
-            this.dataGridView1.Location = new System.Drawing.Point(50, 136);
+            this.dataGridView1.Location = new System.Drawing.Point(62, 170);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(898, 369);
+            this.dataGridView1.Size = new System.Drawing.Size(900, 461);
             this.dataGridView1.TabIndex = 7;
             // 
             // Column1
@@ -103,23 +108,25 @@ namespace Tava.Forms
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(70, 27);
+            this.pictureBox1.Location = new System.Drawing.Point(88, 34);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(94, 72);
+            this.pictureBox1.Size = new System.Drawing.Size(118, 90);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
             // 
             // FormProducts
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(985, 534);
+            this.ClientSize = new System.Drawing.Size(1231, 668);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormProducts";
             this.Text = "FormProducts";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
