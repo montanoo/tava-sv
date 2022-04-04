@@ -42,3 +42,6 @@ Descargarlo por Google Drive a través del siguiente enlace: <a href="https://dr
 
   
 </details>
+
+<h1 align="center"> Preview 📽️ </h1>
+Puedes encontrar una muestra de como se ve nuestro proyecto en el siguiente enlace: <a href="https://drive.google.com/file/d/1BNcsepAXVgd12GFtMZbTisq-zFmZIsq6/view"> Tava Funcionalidad </a>
