@@ -6,7 +6,7 @@
 - Luciana María Munguía Villacorta. MV210941.
 - Ivania María Lebrón Flores. LF212591.
 - Andrea Guadalupe Velásquez Joyar. VJ210576
-- Carlos Vicente Castillo Sayes. CS210003.
+- Bryan Josué Alberto Elena. AE210567.
 
 <h1 align="center"> Prerrequisitos ⚙️ </h1>
 Como requisitos mínimos que te pedimos que poseas en tu computadora para poder correr nuestro proyecto con éxito, son los siguientes:
