@@ -15,6 +15,19 @@ namespace Tava.Forms
         public FormCustomers()
         {
             InitializeComponent();
+            ShowDgv();
+        }
+
+        public void ShowDgv()
+        {
+            using (var db = new Models.TavaContext())
+            {
+                var list = db.Clients;
+                foreach (var cli in list)
+                {
+                    dataGridView1.Rows.Add(cli.Id, cli.Name + " " + cli.Lastname, cli.Phone, "no disponible");
+                }
+            }
         }
     }
 }
