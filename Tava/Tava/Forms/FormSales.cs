@@ -20,6 +20,14 @@ namespace Tava.Forms
 
         public void ShowDgv()
         {
+            using (var db = new Models.TavaContext())
+            {
+                var list = db.Clients;
+                foreach (var client in list)
+                {
+                    dataGridView1.Rows.Add(client.Id, client.Name +" "+ client.Lastname, client.Phone, "not available");
+                }
+            }
             //Models.TavaContext db = new Models.TavaContext();
             //var client = (from client in db.Clients select client);
             //dataGridView1.DataSource = Tava.Models.Client.tolist;
