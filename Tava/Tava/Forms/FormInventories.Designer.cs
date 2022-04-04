@@ -49,16 +49,16 @@ namespace Tava.Forms
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(644, 32);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(129, 46);
+            this.label1.Size = new System.Drawing.Size(130, 44);
             this.label1.TabIndex = 0;
             this.label1.Text = "Productos en el\r\ninventario:";
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button1.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button1.Location = new System.Drawing.Point(192, 419);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(151, 59);
@@ -68,7 +68,7 @@ namespace Tava.Forms
             // 
             // button2
             // 
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button2.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button2.Location = new System.Drawing.Point(441, 419);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(186, 59);
@@ -78,7 +78,7 @@ namespace Tava.Forms
             // 
             // button3
             // 
-            this.button3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button3.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button3.Location = new System.Drawing.Point(709, 419);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(124, 59);
@@ -88,8 +88,8 @@ namespace Tava.Forms
             // 
             // textBox1
             // 
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.textBox1.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox1.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.textBox1.Location = new System.Drawing.Point(813, 35);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(125, 30);
