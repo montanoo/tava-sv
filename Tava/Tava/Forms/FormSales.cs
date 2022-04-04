@@ -23,23 +23,19 @@ namespace Tava.Forms
             using (var db = new Models.TavaContext())
             {
                 var list = db.Clients;
-                foreach (var client in list)
+                foreach (var cli in list)
                 {
-                    dataGridView1.Rows.Add(client.Id, client.Name +" "+ client.Lastname, client.Phone, "not available");
+                    dataGridView1.Rows.Add(cli.Id, cli.Name +" "+ cli.Lastname, cli.Phone, 0);
                 }
             }
-            //Models.TavaContext db = new Models.TavaContext();
-            //var client = (from client in db.Clients select client);
-            //dataGridView1.DataSource = Tava.Models.Client.tolist;
 
-            //using (var db = new Models.TavaContext())
+            //using (var db = new TavaContext())
             //{
-
-            //    var qLoggedIn = from r in db.Clients
-            //                    select new { Name = r.Name + ", " + r.Lastname, r.Phone };
-
-            //    dataGridView1.DataSource = qLoggedIn.ToList();
-
+            //    var list = db.Products;
+            //    foreach (var prod in list)
+            //    {
+            //        dataGridView1.Rows.Add(prod.Id, prod.Name, prod.Description);
+            //    }
             //}
 
         }
