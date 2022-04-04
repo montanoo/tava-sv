@@ -59,88 +59,103 @@ namespace Tava.Forms
             // numericUpDown1
             // 
             this.numericUpDown1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.numericUpDown1.Location = new System.Drawing.Point(207, 426);
+            this.numericUpDown1.Location = new System.Drawing.Point(181, 320);
+            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(88, 30);
+            this.numericUpDown1.Size = new System.Drawing.Size(77, 25);
             this.numericUpDown1.TabIndex = 41;
             // 
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(701, 427);
+            this.button2.Location = new System.Drawing.Point(613, 320);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(107, 42);
+            this.button2.Size = new System.Drawing.Size(94, 32);
             this.button2.TabIndex = 40;
             this.button2.Text = "Limpiar";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(534, 426);
+            this.button1.Location = new System.Drawing.Point(467, 320);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(116, 44);
+            this.button1.Size = new System.Drawing.Size(102, 33);
             this.button1.TabIndex = 39;
             this.button1.Text = "Registrar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox6
             // 
             this.textBox6.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBox6.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.textBox6.Location = new System.Drawing.Point(609, 279);
+            this.textBox6.Location = new System.Drawing.Point(533, 209);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(304, 30);
+            this.textBox6.Size = new System.Drawing.Size(266, 25);
             this.textBox6.TabIndex = 38;
             this.textBox6.Text = "Local, municipio, departamento, otro.";
+            this.textBox6.Enter += new System.EventHandler(this.textBox6_Enter);
             // 
             // textBox5
             // 
             this.textBox5.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBox5.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.textBox5.Location = new System.Drawing.Point(746, 336);
+            this.textBox5.Location = new System.Drawing.Point(653, 252);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(167, 30);
+            this.textBox5.Size = new System.Drawing.Size(147, 25);
             this.textBox5.TabIndex = 37;
             this.textBox5.Text = "DD/MM/AA";
+            this.textBox5.Enter += new System.EventHandler(this.textBox5_Enter);
             // 
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBox3.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.textBox3.Location = new System.Drawing.Point(93, 221);
+            this.textBox3.Location = new System.Drawing.Point(81, 166);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(194, 30);
+            this.textBox3.Size = new System.Drawing.Size(170, 25);
             this.textBox3.TabIndex = 35;
             this.textBox3.Text = "0000-0000";
+            this.textBox3.Enter += new System.EventHandler(this.textBox3_Enter);
             // 
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBox2.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.textBox2.Location = new System.Drawing.Point(286, 145);
+            this.textBox2.Location = new System.Drawing.Point(250, 109);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(168, 30);
+            this.textBox2.Size = new System.Drawing.Size(148, 25);
             this.textBox2.TabIndex = 34;
             this.textBox2.Text = "Apellido";
+            this.textBox2.Enter += new System.EventHandler(this.textBox2_Enter);
             // 
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBox1.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.textBox1.Location = new System.Drawing.Point(93, 145);
+            this.textBox1.Location = new System.Drawing.Point(81, 109);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(169, 30);
+            this.textBox1.Size = new System.Drawing.Size(148, 25);
             this.textBox1.TabIndex = 33;
             this.textBox1.Text = "Nombre";
+            this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label12.Location = new System.Drawing.Point(645, 343);
+            this.label12.Location = new System.Drawing.Point(564, 257);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(58, 23);
+            this.label12.Size = new System.Drawing.Size(47, 19);
             this.label12.TabIndex = 32;
             this.label12.Text = "Fecha:";
             // 
@@ -148,9 +163,9 @@ namespace Tava.Forms
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label11.Location = new System.Drawing.Point(609, 253);
+            this.label11.Location = new System.Drawing.Point(533, 190);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(85, 23);
+            this.label11.Size = new System.Drawing.Size(68, 19);
             this.label11.TabIndex = 31;
             this.label11.Text = "Dirección:";
             // 
@@ -158,9 +173,9 @@ namespace Tava.Forms
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(609, 107);
+            this.label8.Location = new System.Drawing.Point(533, 80);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(131, 23);
+            this.label8.Size = new System.Drawing.Size(105, 19);
             this.label8.TabIndex = 28;
             this.label8.Text = "Tipo de entrega";
             // 
@@ -168,9 +183,9 @@ namespace Tava.Forms
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(327, 435);
+            this.label7.Location = new System.Drawing.Point(286, 326);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(64, 23);
+            this.label7.Size = new System.Drawing.Size(53, 19);
             this.label7.TabIndex = 27;
             this.label7.Text = "Total: $";
             // 
@@ -178,9 +193,9 @@ namespace Tava.Forms
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(122, 428);
+            this.label6.Location = new System.Drawing.Point(107, 321);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(79, 23);
+            this.label6.Size = new System.Drawing.Size(64, 19);
             this.label6.TabIndex = 26;
             this.label6.Text = "Cantidad";
             // 
@@ -188,9 +203,9 @@ namespace Tava.Forms
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(93, 336);
+            this.label5.Location = new System.Drawing.Point(81, 252);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(227, 15);
+            this.label5.Size = new System.Drawing.Size(188, 12);
             this.label5.TabIndex = 25;
             this.label5.Text = "Es necesario haber registrado el producto.";
             // 
@@ -198,9 +213,9 @@ namespace Tava.Forms
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(93, 277);
+            this.label4.Location = new System.Drawing.Point(81, 208);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(84, 23);
+            this.label4.Size = new System.Drawing.Size(68, 19);
             this.label4.TabIndex = 24;
             this.label4.Text = "Producto:";
             // 
@@ -208,9 +223,9 @@ namespace Tava.Forms
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(93, 195);
+            this.label3.Location = new System.Drawing.Point(81, 146);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(157, 23);
+            this.label3.Size = new System.Drawing.Size(125, 19);
             this.label3.TabIndex = 23;
             this.label3.Text = "Número telefónico:";
             // 
@@ -218,9 +233,9 @@ namespace Tava.Forms
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(93, 119);
+            this.label2.Location = new System.Drawing.Point(81, 89);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 23);
+            this.label2.Size = new System.Drawing.Size(51, 19);
             this.label2.TabIndex = 22;
             this.label2.Text = "Cliente";
             // 
@@ -228,9 +243,9 @@ namespace Tava.Forms
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(343, 24);
+            this.label1.Location = new System.Drawing.Point(300, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(223, 37);
+            this.label1.Size = new System.Drawing.Size(182, 30);
             this.label1.TabIndex = 21;
             this.label1.Text = "Registro de venta";
             // 
@@ -238,18 +253,20 @@ namespace Tava.Forms
             // 
             this.comboBox1.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(93, 303);
+            this.comboBox1.Location = new System.Drawing.Point(81, 227);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(361, 28);
+            this.comboBox1.Size = new System.Drawing.Size(316, 23);
             this.comboBox1.TabIndex = 42;
             this.comboBox1.Text = "Seleccionar producto";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(89, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(78, 9);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(94, 72);
+            this.pictureBox1.Size = new System.Drawing.Size(82, 54);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 43;
             this.pictureBox1.TabStop = false;
@@ -258,9 +275,10 @@ namespace Tava.Forms
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBox1.Location = new System.Drawing.Point(609, 148);
+            this.checkBox1.Location = new System.Drawing.Point(533, 111);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(71, 27);
+            this.checkBox1.Size = new System.Drawing.Size(59, 23);
             this.checkBox1.TabIndex = 44;
             this.checkBox1.Text = "Local";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -269,19 +287,20 @@ namespace Tava.Forms
             // 
             this.checkBox2.AutoSize = true;
             this.checkBox2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBox2.Location = new System.Drawing.Point(609, 180);
+            this.checkBox2.Location = new System.Drawing.Point(533, 135);
+            this.checkBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(103, 27);
+            this.checkBox2.Size = new System.Drawing.Size(84, 23);
             this.checkBox2.TabIndex = 45;
             this.checkBox2.Text = "Domicilio";
             this.checkBox2.UseVisualStyleBackColor = true;
             // 
             // FormSalesRegistration
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(985, 534);
+            this.ClientSize = new System.Drawing.Size(862, 400);
             this.Controls.Add(this.checkBox2);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.pictureBox1);
@@ -304,6 +323,7 @@ namespace Tava.Forms
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormSalesRegistration";
             this.Text = "FormSalesRegistration";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
