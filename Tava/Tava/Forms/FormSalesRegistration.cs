@@ -54,10 +54,12 @@ namespace Tava.Forms
             {
                 using (var db = new Tava.Models.TavaContext())
                 {
-                    var ClientData = new Models.Client();
-                    ClientData.Name = name;
-                    ClientData.Lastname = lastname;
-                    ClientData.Phone = phone;
+                    var ClientData = new Models.Client
+                    {
+                        Name = name,
+                        Lastname = lastname,
+                        Phone = phone
+                    };
 
                     db.Clients.Add(ClientData);
                     db.SaveChanges();
