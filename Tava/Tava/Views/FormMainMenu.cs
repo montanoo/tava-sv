@@ -166,5 +166,10 @@ namespace Tava.Views
                 activateForm.Close();
             Reset();
         }
+
+        private void FormMainMenu_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

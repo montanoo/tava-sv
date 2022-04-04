@@ -26,6 +26,9 @@ namespace Tava.Views
             var login = new LoginUser();
             var canLogin = login.Login(txtUser.Text, txtPassword.Text);
             if (!canLogin) return;
+
+            var enterMain = new FormMainMenu();
+            enterMain.Show();
             this.Hide();
         }
 
