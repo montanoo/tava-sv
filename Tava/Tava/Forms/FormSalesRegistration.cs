@@ -48,12 +48,39 @@ namespace Tava.Forms
         {
             string name = textBox1.Text;
             string lastname = textBox2.Text;
-            string phone = textBox3.Text;
+            int phone = int.Parse(textBox3.Text);
 
-            using (var db = new Tava.Models.TavaContext())
+            try
             {
+                using (var db = new Tava.Models.TavaContext())
+                {
+                    var ClientData = new Models.Client();
+                    ClientData.Name = name;
+                    ClientData.Lastname = lastname;
+                    ClientData.Phone = phone;
 
+                    db.Clients.Add(ClientData);
+                    db.SaveChanges();
+                }
+                MessageBox.Show("El cliente ha sido agregado! El registro de venta estará disponible en la próxima entrega", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+            catch
+            {
+                MessageBox.Show("Ha ocurrido un problema al ingresar la venta, intentalo más tarde", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = "";
+            textBox2.Text = "";
+            textBox3.Text = "";
+            textBox5.Text = "";
+            textBox6.Text = "";
+            comboBox1.SelectionStart = 0;
+            numericUpDown1.Value = 0;
+            checkBox1.Checked = false;
+            checkBox2.Checked = false;
         }
     }
 }
