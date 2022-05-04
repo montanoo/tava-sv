@@ -78,7 +78,7 @@ namespace Tava.Forms
                     using (var db = new TavaContext())
                     {
                         //llenar la tabla de clientes
-                        var ClientData = new Models.Client
+                        var ClientData = new Client
                         {
                             Name = name,
                             Lastname = lastname,
@@ -126,12 +126,12 @@ namespace Tava.Forms
                         db.SaveChanges();
                     }
                     MessageBox.Show("El cliente ha sido agregado!", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+                }
                 catch
-            {
-                MessageBox.Show("Ha ocurrido un problema al ingresar la venta, intentalo más tarde", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                {
+                    MessageBox.Show("Ha ocurrido un problema al ingresar la venta, intentalo más tarde", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
-        }
             else
             {
                 MessageBox.Show("Rellena todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
