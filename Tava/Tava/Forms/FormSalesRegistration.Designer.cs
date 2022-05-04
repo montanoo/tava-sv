@@ -272,6 +272,7 @@ namespace Tava.Forms
             this.checkBox1.TabIndex = 44;
             this.checkBox1.Text = "Local";
             this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // checkBox2
             // 
@@ -284,6 +285,7 @@ namespace Tava.Forms
             this.checkBox2.TabIndex = 45;
             this.checkBox2.Text = "Domicilio";
             this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
             // dateTimePicker1
             // 

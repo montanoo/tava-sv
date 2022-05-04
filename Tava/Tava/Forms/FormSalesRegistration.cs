@@ -59,6 +59,7 @@ namespace Tava.Forms
                 string lastname = textBox2.Text;
                 int phone = int.Parse(textBox3.Text);
                 DateTime date = dateTimePicker1.Value;
+                string addressto = "TAVA";
 
                 //llenar el tipo de venta
                 string saletype = "";
@@ -69,67 +70,68 @@ namespace Tava.Forms
                 if (checkBox2.Checked)
                 {
                     saletype = "Domicilio";
+                    addressto = textBox6.Text;
                 }
 
-                //try
-                //{
-                using (var db = new TavaContext())
+                try
                 {
-                    //llenar la tabla de clientes
-                    var ClientData = new Models.Client
+                    using (var db = new TavaContext())
                     {
-                        Name = name,
-                        Lastname = lastname,
-                        Phone = phone
-                    };
-                    db.Clients.Add(ClientData);
-                    db.SaveChanges();
+                        //llenar la tabla de clientes
+                        var ClientData = new Models.Client
+                        {
+                            Name = name,
+                            Lastname = lastname,
+                            Phone = phone
+                        };
+                        db.Clients.Add(ClientData);
+                        db.SaveChanges();
 
-                    //obtener los datos del cliente, el producto y el usuario a registrar
-                    var idclient = (from c in db.Clients
-                                    where c.Name == textBox1.Text
-                                    select c).SingleOrDefault();
-                    var idprod = (from d in db.Products
-                                  where d.Name == comboBox1.Text
-                                  select d).SingleOrDefault();
-                    var iduser = (from t in db.Users
-                                  where t.Username == user
-                                  select t).SingleOrDefault();
+                        //obtener los datos del cliente, el producto y el usuario a registrar
+                        var idclient = (from c in db.Clients
+                                        where c.Name == textBox1.Text
+                                        select c).SingleOrDefault();
+                        var idprod = (from d in db.Products
+                                      where d.Name == comboBox1.Text
+                                      select d).SingleOrDefault();
+                        var iduser = (from t in db.Users
+                                      where t.Username == user
+                                      select t).SingleOrDefault();
 
-                    //llenamos la tabla de direcciones
-                    var SalePoint = new Pointofsale
-                    {
-                        Type = saletype,
-                        Address = textBox6.Text
-                    };
-                    db.Pointofsales.Add(SalePoint);
-                    db.SaveChanges();
+                        //llenamos la tabla de direcciones
+                        var SalePoint = new Pointofsale
+                        {
+                            Type = saletype,
+                            Address = addressto
+                        };
+                        db.Pointofsales.Add(SalePoint);
+                        db.SaveChanges();
 
-                    var idpoint = (from p in db.Pointofsales
-                                  where p.Address == textBox6.Text
-                                   select p).SingleOrDefault();
-                    //llenamos los datos de venta
-                    var SalesData = new Billing
-                    {
-                        AdminId = iduser.Id,
-                        ClientId = idclient.Id,
-                        Date = date,
-                        ProductId = idprod.Id,
-                        Quantity = int.Parse(numericUpDown1.Value.ToString()),
-                        Totalprice = idprod.Price * int.Parse(numericUpDown1.Value.ToString()),
-                        PointofsaleId = idpoint.Id
-                    };
+                        var idpoint = (from p in db.Pointofsales
+                                       where p.Address == addressto
+                                       select p).SingleOrDefault();
+                        //llenamos los datos de venta
+                        var SalesData = new Billing
+                        {
+                            AdminId = iduser.Id,
+                            ClientId = idclient.Id,
+                            Date = date,
+                            ProductId = idprod.Id,
+                            Quantity = int.Parse(numericUpDown1.Value.ToString()),
+                            Totalprice = idprod.Price * int.Parse(numericUpDown1.Value.ToString()),
+                            PointofsaleId = idpoint.Id
+                        };
 
-                    db.Billings.Add(SalesData);
-                    db.SaveChanges();
-                }
-                MessageBox.Show("El cliente ha sido agregado! El registro de venta estará disponible en la próxima entrega", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                //}
-                //catch
-                //{
-                //    MessageBox.Show("Ha ocurrido un problema al ingresar la venta, intentalo más tarde", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                //}
+                        db.Billings.Add(SalesData);
+                        db.SaveChanges();
+                    }
+                    MessageBox.Show("El cliente ha sido agregado!", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+                catch
+            {
+                MessageBox.Show("Ha ocurrido un problema al ingresar la venta, intentalo más tarde", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
             else
             {
                 MessageBox.Show("Rellena todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -158,6 +160,24 @@ namespace Tava.Forms
                 {
                     comboBox1.Items.Add(obj.Name);
                 }
+            }
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                textBox6.Enabled = false;
+                checkBox2.Checked = false;
+            }
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox2.Checked)
+            {
+                textBox6.Enabled = true;
+                checkBox1.Checked = false;
             }
         }
     }
