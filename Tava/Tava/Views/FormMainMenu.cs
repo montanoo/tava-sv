@@ -17,6 +17,7 @@ namespace Tava.Views
         private Random random;
         private int tempIndex;
         private Form activateForm;
+        private string user;
 
 
         // Contructor
@@ -25,6 +26,13 @@ namespace Tava.Views
             InitializeComponent();
             random = new Random();
             btnCloseChildForm.Visible = false;
+        }
+        public FormMainMenu(string username)
+        {
+            InitializeComponent();
+            random = new Random();
+            btnCloseChildForm.Visible = false;
+            user = username;
         }
 
         // Methods
@@ -127,7 +135,7 @@ namespace Tava.Views
         private void button1_Click(object sender, EventArgs e)
         {
             // We replace the open form method
-           OpenChildForm(new Forms.FormSalesRegistration(), sender);
+           OpenChildForm(new Forms.FormSalesRegistration(user), sender);
         }
 
         private void button2_Click(object sender, EventArgs e)
