@@ -17,11 +17,15 @@ namespace Tava.Forms
     public partial class FormSalesRegistration : Form
     {
         private string user;
+
+        //default address
+        string addressto = "TAVA";
         public FormSalesRegistration()
         {
             InitializeComponent();
             FillCombobox();
         }
+        //constructor que recibe el nombre de usuario
         public FormSalesRegistration(string username)
         {
             InitializeComponent();
@@ -59,9 +63,8 @@ namespace Tava.Forms
                 string lastname = textBox2.Text;
                 int phone = int.Parse(textBox3.Text);
                 DateTime date = dateTimePicker1.Value;
-                string addressto = "TAVA";
 
-                //llenar el tipo de venta
+                //llenar el tipo de venta y la direccion si es a domicilio
                 string saletype = "";
                 if (checkBox1.Checked)
                 {
@@ -72,19 +75,22 @@ namespace Tava.Forms
                     saletype = "Domicilio";
                     addressto = textBox6.Text;
                 }
-
                 try
                 {
                     using (var db = new TavaContext())
                     {
                         //llenar la tabla de clientes
-                        var ClientData = new Client
+                        // si existe el cliente no llenaremos la tabla otra vez
+                        if (!RepeatedClient())
                         {
-                            Name = name,
-                            Lastname = lastname,
-                            Phone = phone
-                        };
-                        db.Clients.Add(ClientData);
+                            var ClientData = new Client
+                            {
+                                Name = name,
+                                Lastname = lastname,
+                                Phone = phone
+                            };
+                            db.Clients.Add(ClientData);
+                        }
                         db.SaveChanges();
 
                         //obtener los datos del cliente, el producto y el usuario a registrar
@@ -99,18 +105,23 @@ namespace Tava.Forms
                                       select t).SingleOrDefault();
 
                         //llenamos la tabla de direcciones
-                        var SalePoint = new Pointofsale
+                        //revisamos que no se repitan las direcciones
+                        if(!RepeatedAddress())
                         {
-                            Type = saletype,
-                            Address = addressto
-                        };
-                        db.Pointofsales.Add(SalePoint);
+                            var SalePoint = new Pointofsale
+                            {
+                                Type = saletype,
+                                Address = addressto
+                            };
+                            db.Pointofsales.Add(SalePoint);
+                        }
                         db.SaveChanges();
 
                         var idpoint = (from p in db.Pointofsales
                                        where p.Address == addressto
                                        select p).SingleOrDefault();
-                        //llenamos los datos de venta
+
+                        //llenamos los datos de venta en billing
                         var SalesData = new Billing
                         {
                             AdminId = iduser.Id,
@@ -121,15 +132,14 @@ namespace Tava.Forms
                             Totalprice = idprod.Price * int.Parse(numericUpDown1.Value.ToString()),
                             PointofsaleId = idpoint.Id
                         };
-
                         db.Billings.Add(SalesData);
                         db.SaveChanges();
                     }
-                    MessageBox.Show("El cliente ha sido agregado!", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("La venta ha sido registrada", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch
                 {
-                    MessageBox.Show("Ha ocurrido un problema al ingresar la venta, intentalo más tarde", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("No se ha podido registrar la venta", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             else
@@ -151,7 +161,7 @@ namespace Tava.Forms
             checkBox2.Checked = false;
             dateTimePicker1.Value = DateTime.Now;
         }
-
+        //llenamos el combobox con los productos registrados
         private void FillCombobox()
         {
             using (var db = new TavaContext())
@@ -162,7 +172,7 @@ namespace Tava.Forms
                 }
             }
         }
-
+        // revisa que solo se pueda seleccionar un checkbox a la vez
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBox1.Checked)
@@ -179,6 +189,46 @@ namespace Tava.Forms
                 textBox6.Enabled = true;
                 checkBox1.Checked = false;
             }
+        }
+        //revisar si el cliente ya existe en la bd
+        private bool RepeatedClient()
+        {
+            bool repetition = false;
+            using (var db = new TavaContext())
+            {
+                if (db.Clients.Count() != 0)
+                {
+                    var idclient = (from c in db.Clients
+                                    where c.Name == textBox1.Text
+                                    select c).SingleOrDefault();
+
+                    if (idclient != null)
+                    {
+                        repetition = true;
+                    }
+                }
+            }
+            return repetition;
+        }
+        //revisar si la direccion ya existe en la bd
+        private bool RepeatedAddress()
+        {
+            bool repetition = false;
+            using (var db = new TavaContext())
+            {
+                if (db.Pointofsales.Count() != 0)
+                {
+                    var idpoint = (from c in db.Pointofsales
+                                    where c.Address == addressto
+                                    select c).SingleOrDefault();
+
+                    if (idpoint != null)
+                    {
+                        repetition = true;
+                    }
+                }
+            }
+            return repetition;
         }
     }
 }
