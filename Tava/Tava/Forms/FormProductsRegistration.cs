@@ -53,7 +53,7 @@ namespace Tava.Forms
                         {
                         Name= Nombretxt.Text,
                         Description = DescripcionTxt.Text,
-                        Unitsperset = Convert.ToInt32(UnidadesTxt.Value),
+                        Unitsperset = Convert.ToInt32(Math.Round(UnidadesTxt.Value,0)),
                         Price = Convert.ToDouble(PrecioTxt.Text),
                         Package = EmpaqueTxt.Text
                     };

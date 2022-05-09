@@ -7,14 +7,53 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Tava.Models;
 
 namespace Tava.Forms
 {
     public partial class FormProducts : Form
     {
+        DialogResult dr;
         public FormProducts()
         {
             InitializeComponent();
+            using(var db = new TavaContext())
+            {
+                var list = db.Products;
+                foreach(var prod in list)
+                {
+                    dataGridView1.Rows.Add(prod.Id, prod.Name, prod.Package, prod.Unitsperset, prod.Price, prod.Stock);
+                }
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string nombre = dataGridView1.SelectedCells[1].Value.ToString();
+                string id= dataGridView1.SelectedCells[0].Value.ToString();
+                dr =MessageBox.Show($"Estas seguro que quieres borrar el registro del producto {nombre}" , "Advertencia", MessageBoxButtons.YesNo);
+                if(dr == System.Windows.Forms.DialogResult.Yes)
+                {
+                   using(var db = new TavaContext())
+                    {
+                        Product prod = db.Products.Where(i => i.Name == nombre).First();
+                        db.Products.Remove(prod);
+                        db.SaveChanges();
+                        foreach(DataGridViewRow item in this.dataGridView1.SelectedRows)
+                        {
+                            dataGridView1.Rows.RemoveAt(item.Index);
+                        }
+
+                    }
+                    MessageBox.Show("Registro eliminado con exito");
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Seleccione un registro a eliminar");
+            }
         }
     }
 }

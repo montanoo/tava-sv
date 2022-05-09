@@ -104,9 +104,19 @@ namespace Tava.Forms
             // UnidadesTxt
             // 
             this.UnidadesTxt.Location = new System.Drawing.Point(891, 144);
+            this.UnidadesTxt.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.UnidadesTxt.Name = "UnidadesTxt";
             this.UnidadesTxt.Size = new System.Drawing.Size(67, 31);
             this.UnidadesTxt.TabIndex = 8;
+            this.UnidadesTxt.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // label5
             // 
