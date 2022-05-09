@@ -51,9 +51,10 @@ namespace Tava.Forms
             // 
             this.PrecioTxt.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.PrecioTxt.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.PrecioTxt.Location = new System.Drawing.Point(750, 203);
+            this.PrecioTxt.Location = new System.Drawing.Point(938, 254);
+            this.PrecioTxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PrecioTxt.Name = "PrecioTxt";
-            this.PrecioTxt.Size = new System.Drawing.Size(96, 30);
+            this.PrecioTxt.Size = new System.Drawing.Size(119, 34);
             this.PrecioTxt.TabIndex = 22;
             this.PrecioTxt.Text = "0.00";
             this.PrecioTxt.Click += new System.EventHandler(this.PrecioTxt_Click);
@@ -62,9 +63,10 @@ namespace Tava.Forms
             // 
             this.EmpaqueTxt.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.EmpaqueTxt.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.EmpaqueTxt.Location = new System.Drawing.Point(604, 311);
+            this.EmpaqueTxt.Location = new System.Drawing.Point(755, 389);
+            this.EmpaqueTxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.EmpaqueTxt.Name = "EmpaqueTxt";
-            this.EmpaqueTxt.Size = new System.Drawing.Size(268, 30);
+            this.EmpaqueTxt.Size = new System.Drawing.Size(334, 35);
             this.EmpaqueTxt.TabIndex = 21;
             this.EmpaqueTxt.Text = "Caja, bolsa, otros";
             this.EmpaqueTxt.Click += new System.EventHandler(this.EmpaqueTxt_Click);
@@ -73,27 +75,30 @@ namespace Tava.Forms
             // 
             this.DescripcionTxt.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.DescripcionTxt.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.DescripcionTxt.Location = new System.Drawing.Point(64, 267);
+            this.DescripcionTxt.Location = new System.Drawing.Point(80, 334);
+            this.DescripcionTxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.DescripcionTxt.Multiline = true;
             this.DescripcionTxt.Name = "DescripcionTxt";
-            this.DescripcionTxt.Size = new System.Drawing.Size(411, 126);
+            this.DescripcionTxt.Size = new System.Drawing.Size(513, 156);
             this.DescripcionTxt.TabIndex = 20;
             // 
             // NombreTxt
             // 
             this.NombreTxt.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.NombreTxt.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.NombreTxt.Location = new System.Drawing.Point(64, 170);
+            this.NombreTxt.Location = new System.Drawing.Point(80, 212);
+            this.NombreTxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.NombreTxt.Name = "NombreTxt";
-            this.NombreTxt.Size = new System.Drawing.Size(411, 30);
+            this.NombreTxt.Size = new System.Drawing.Size(513, 35);
             this.NombreTxt.TabIndex = 19;
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(399, 412);
+            this.button1.Location = new System.Drawing.Point(499, 515);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(211, 58);
+            this.button1.Size = new System.Drawing.Size(264, 72);
             this.button1.TabIndex = 18;
             this.button1.Text = "Registrar producto";
             this.button1.UseVisualStyleBackColor = true;
@@ -103,9 +108,10 @@ namespace Tava.Forms
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(604, 270);
+            this.label6.Location = new System.Drawing.Point(755, 338);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(146, 22);
+            this.label6.Size = new System.Drawing.Size(181, 28);
             this.label6.TabIndex = 17;
             this.label6.Text = "Tipo de empaque:";
             // 
@@ -113,9 +119,10 @@ namespace Tava.Forms
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(604, 210);
+            this.label5.Location = new System.Drawing.Point(755, 262);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(59, 22);
+            this.label5.Size = new System.Drawing.Size(71, 28);
             this.label5.TabIndex = 16;
             this.label5.Text = "Precio";
             // 
@@ -123,9 +130,10 @@ namespace Tava.Forms
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(604, 126);
+            this.label4.Location = new System.Drawing.Point(755, 158);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(82, 44);
+            this.label4.Size = new System.Drawing.Size(102, 56);
             this.label4.TabIndex = 15;
             this.label4.Text = "Unidades\r\npor set:";
             // 
@@ -133,9 +141,10 @@ namespace Tava.Forms
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(64, 226);
+            this.label3.Location = new System.Drawing.Point(80, 282);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(106, 22);
+            this.label3.Size = new System.Drawing.Size(130, 28);
             this.label3.TabIndex = 14;
             this.label3.Text = "Descripción:";
             // 
@@ -143,9 +152,10 @@ namespace Tava.Forms
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(64, 126);
+            this.label2.Location = new System.Drawing.Point(80, 158);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(181, 22);
+            this.label2.Size = new System.Drawing.Size(223, 28);
             this.label2.TabIndex = 13;
             this.label2.Text = "Nombre del producto:";
             // 
@@ -153,9 +163,10 @@ namespace Tava.Forms
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Variable Display", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(344, 31);
+            this.label1.Location = new System.Drawing.Point(430, 39);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(311, 37);
+            this.label1.Size = new System.Drawing.Size(365, 44);
             this.label1.TabIndex = 12;
             this.label1.Text = "Registro de productos";
             // 
@@ -163,14 +174,15 @@ namespace Tava.Forms
             // 
             this.UnidadesTxt.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.UnidadesTxt.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.UnidadesTxt.Location = new System.Drawing.Point(750, 142);
+            this.UnidadesTxt.Location = new System.Drawing.Point(938, 178);
+            this.UnidadesTxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.UnidadesTxt.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
             this.UnidadesTxt.Name = "UnidadesTxt";
-            this.UnidadesTxt.Size = new System.Drawing.Size(96, 30);
+            this.UnidadesTxt.Size = new System.Drawing.Size(120, 34);
             this.UnidadesTxt.TabIndex = 23;
             this.UnidadesTxt.Value = new decimal(new int[] {
             1,
@@ -181,19 +193,20 @@ namespace Tava.Forms
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(64, 31);
+            this.pictureBox1.Location = new System.Drawing.Point(80, 39);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(94, 72);
+            this.pictureBox1.Size = new System.Drawing.Size(118, 90);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 24;
             this.pictureBox1.TabStop = false;
             // 
             // FormProductsRegistration
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(985, 534);
+            this.ClientSize = new System.Drawing.Size(1231, 668);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.UnidadesTxt);
             this.Controls.Add(this.PrecioTxt);
@@ -207,6 +220,7 @@ namespace Tava.Forms
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormProductsRegistration";
             this.Text = "FormProductsRegistration";
             this.Load += new System.EventHandler(this.FormProductsRegistration_Load);
