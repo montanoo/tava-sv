@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Tava.Models;
+
 
 namespace Tava.Forms
 {
@@ -15,6 +17,7 @@ namespace Tava.Forms
         //variables for search bar
         public DataTable input;
         string filterField = "Nombre";
+        int counterid = 1;
         public FormCustomers()
         {
             InitializeComponent();
@@ -25,9 +28,15 @@ namespace Tava.Forms
             using (var db = new Models.TavaContext())
             {
                 var list = db.Clients;
+                Billing billings = new Billing();
+                var list1 = db.Billings;
                 foreach (var cli in list)
                 {
-                    dataGridView1.Rows.Add(cli.Id, cli.Name + " " + cli.Lastname, cli.Phone, "no disponible");
+
+                    var quantity =  db.Billings.GroupBy(a => a.ClientId).Select(g => g.Count()).FirstOrDefault();
+                    
+                    
+                    dataGridView1.Rows.Add(cli.Id, cli.Name + " " + cli.Lastname, cli.Phone, quantity);
                 }
             }
         }
