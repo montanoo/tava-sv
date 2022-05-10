@@ -38,6 +38,7 @@ namespace Tava.Forms
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.BtnOK = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -47,27 +48,28 @@ namespace Tava.Forms
             this.textBox1.BackColor = System.Drawing.Color.White;
             this.textBox1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBox1.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.textBox1.Location = new System.Drawing.Point(639, 32);
+            this.textBox1.Location = new System.Drawing.Point(579, 32);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(177, 25);
             this.textBox1.TabIndex = 10;
-            this.textBox1.Text = "Buscar...";
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox1.Text = "Buscar por nombre...";
             this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(545, 34);
+            this.label1.Location = new System.Drawing.Point(507, 34);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 19);
+            this.label1.Size = new System.Drawing.Size(54, 19);
             this.label1.TabIndex = 9;
-            this.label1.Text = "Direcciones:";
+            this.label1.Text = "Cliente:";
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -89,7 +91,6 @@ namespace Tava.Forms
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
-            this.Column1.Width = 75;
             // 
             // Column2
             // 
@@ -97,7 +98,6 @@ namespace Tava.Forms
             this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
-            this.Column2.Width = 400;
             // 
             // Column3
             // 
@@ -105,7 +105,6 @@ namespace Tava.Forms
             this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
-            this.Column3.Width = 215;
             // 
             // Column4
             // 
@@ -113,7 +112,6 @@ namespace Tava.Forms
             this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
-            this.Column4.Width = 150;
             // 
             // pictureBox1
             // 
@@ -126,12 +124,26 @@ namespace Tava.Forms
             this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;
             // 
+            // BtnOK
+            // 
+            this.BtnOK.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.BtnOK.Location = new System.Drawing.Point(770, 34);
+            this.BtnOK.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BtnOK.Name = "BtnOK";
+            this.BtnOK.Size = new System.Drawing.Size(44, 25);
+            this.BtnOK.TabIndex = 22;
+            this.BtnOK.Text = "Ok";
+            this.BtnOK.UseVisualStyleBackColor = true;
+            this.BtnOK.Visible = false;
+            this.BtnOK.Click += new System.EventHandler(this.BtnOK_Click);
+            // 
             // FormCustomers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(862, 400);
+            this.Controls.Add(this.BtnOK);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.textBox1);
@@ -156,5 +168,6 @@ namespace Tava.Forms
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button BtnOK;
     }
 }

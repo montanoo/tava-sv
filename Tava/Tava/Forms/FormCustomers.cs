@@ -16,7 +16,7 @@ namespace Tava.Forms
     {
         //variables for search bar
         public DataTable input;
-     //   string filterField = "Nombre";
+        //   string filterField = "Nombre";
         public FormCustomers()
         {
             InitializeComponent();
@@ -32,9 +32,9 @@ namespace Tava.Forms
                 foreach (var cli in list)
                 {
 
-                    var quantity =  db.Billings.GroupBy(a => a.ClientId).Select(g => g.Count()).FirstOrDefault();
-                    
-                    
+                    var quantity = db.Billings.GroupBy(a => a.ClientId).Select(g => g.Count()).FirstOrDefault();
+
+
                     dataGridView1.Rows.Add(cli.Id, cli.Name + " " + cli.Lastname, cli.Phone, quantity);
                 }
             }
@@ -45,14 +45,43 @@ namespace Tava.Forms
             textBox1.Text = "";
         }
 
-        //searchbar
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            //no funciona, arreglar
-            //DataTable tabla = new DataTable();
-            //input = tabla;
-            //input.DefaultView.RowFilter = string.Format("[{0}] LIKE '%{1}%'", filterField, textBox1.Text);
+
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                try
+                {
+                    using (var db = new TavaContext())
+                    {
+                        var prod = db.Clients.Where(i => i.Name == textBox1.Text).ToArray();
+
+                        dataGridView1.Rows.Clear();
+                        dataGridView1.Refresh();
+                        foreach (var p in prod)
+                        {
+                            var quantity = db.Billings.GroupBy(a => a.ClientId).Select(g => g.Count()).FirstOrDefault();
+                            dataGridView1.Rows.Add(p.Id, p.Name + " " + p.Lastname, p.Phone, quantity);
+                        }
+                        BtnOK.Visible = true;
+                    }
+                }
+                catch
+                {
+                    MessageBox.Show("No se ha encontrado ningun producto con ese nombre");
+                    textBox1.Clear();
+                }
+            }
         }
 
+        private void BtnOK_Click(object sender, EventArgs e)
+        {
+            dataGridView1.Rows.Clear();
+            dataGridView1.Refresh();
+            ShowDgv();
+            BtnOK.Visible = false;
+            textBox1.Clear();
+
+        }
     }
 }
