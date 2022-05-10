@@ -16,7 +16,6 @@ namespace Tava.Forms
         DialogResult dr;
         public FormProducts()
         {
-            
             InitializeComponent();
             FillTable();
         }
@@ -27,7 +26,7 @@ namespace Tava.Forms
                 var list = db.Products;
                 foreach (var prod in list)
                 {
-                    dataGridView1.Rows.Add(prod.Id, prod.Name, prod.Description);
+                    dataGridView1.Rows.Add(prod.Id, prod.Name, prod.Description, prod.Price);
                 }
             }
         }
