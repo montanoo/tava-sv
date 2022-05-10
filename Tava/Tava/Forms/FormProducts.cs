@@ -125,8 +125,17 @@ namespace Tava.Forms
             {
                 Product stock = db.Products.Where(a => a.Name == dataGridView1[2, posicion].Value).FirstOrDefault();
                 stock.Stock = Convert.ToInt32(existxt.Text);
-                db.Entry(stock).State = EntityState.Modified;
-                db.SaveChanges();
+                if (stock.Stock == null)
+                {
+                    db.Products.Add(stock);
+                    db.SaveChanges();
+                }
+                else
+                {
+                    db.Entry(stock).State = EntityState.Modified;
+                    db.SaveChanges();
+                }
+                
             }
         }
 
