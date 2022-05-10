@@ -8,12 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Tava.Models;
+using System.IO;
+using Microsoft.EntityFrameworkCore;
 
 namespace Tava.Forms
 {
     public partial class FormProducts : Form
     {
         DialogResult dr;
+        int posicion;
         public FormProducts()
         {
             InitializeComponent();
@@ -112,6 +115,24 @@ namespace Tava.Forms
         private void FormProducts_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void Existbutton_Click(object sender, EventArgs e)
+        {
+
+            dataGridView1[6, posicion].Value = existxt.Text;
+            using (TavaContext db = new TavaContext())
+            {
+                Product stock = db.Products.Where(a => a.Name == dataGridView1[2, posicion].Value).FirstOrDefault();
+                stock.Stock = Convert.ToInt32(existxt.Text);
+                db.Entry(stock).State = EntityState.Modified;
+                db.SaveChanges();
+            }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            posicion = dataGridView1.CurrentRow.Index;
         }
     }
 }

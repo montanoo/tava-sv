@@ -36,13 +36,6 @@ namespace Tava.Forms
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.BtnEliminar = new System.Windows.Forms.Button();
-            this.BtnOK = new System.Windows.Forms.Button();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Empaque = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Unidades = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.N = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,6 +43,16 @@ namespace Tava.Forms
             this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Existencias = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descripción = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.BtnEliminar = new System.Windows.Forms.Button();
+            this.BtnOK = new System.Windows.Forms.Button();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Empaque = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Unidades = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Existbutton = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.existxt = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -115,8 +118,65 @@ namespace Tava.Forms
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.RowTemplate.Height = 29;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(718, 299);
+            this.dataGridView1.Size = new System.Drawing.Size(902, 299);
             this.dataGridView1.TabIndex = 7;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // N
+            // 
+            this.N.HeaderText = "N";
+            this.N.MinimumWidth = 6;
+            this.N.Name = "N";
+            this.N.ReadOnly = true;
+            this.N.Width = 125;
+            // 
+            // Producto
+            // 
+            this.Producto.HeaderText = "Producto";
+            this.Producto.MinimumWidth = 6;
+            this.Producto.Name = "Producto";
+            this.Producto.ReadOnly = true;
+            this.Producto.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "Empaque";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "Unidades";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Width = 125;
+            // 
+            // Precio
+            // 
+            this.Precio.HeaderText = "Precio";
+            this.Precio.MinimumWidth = 6;
+            this.Precio.Name = "Precio";
+            this.Precio.ReadOnly = true;
+            this.Precio.Width = 125;
+            // 
+            // Existencias
+            // 
+            this.Existencias.HeaderText = "Existencias";
+            this.Existencias.MinimumWidth = 6;
+            this.Existencias.Name = "Existencias";
+            this.Existencias.ReadOnly = true;
+            this.Existencias.Width = 125;
+            // 
+            // Descripción
+            // 
+            this.Descripción.HeaderText = "Descripción";
+            this.Descripción.MinimumWidth = 6;
+            this.Descripción.Name = "Descripción";
+            this.Descripción.ReadOnly = true;
+            this.Descripción.Width = 125;
             // 
             // pictureBox1
             // 
@@ -179,61 +239,35 @@ namespace Tava.Forms
             this.Unidades.Name = "Unidades";
             this.Unidades.Width = 125;
             // 
-            // N
+            // Existbutton
             // 
-            this.N.HeaderText = "N";
-            this.N.MinimumWidth = 6;
-            this.N.Name = "N";
-            this.N.ReadOnly = true;
-            this.N.Width = 125;
+            this.Existbutton.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Existbutton.Location = new System.Drawing.Point(781, 480);
+            this.Existbutton.Name = "Existbutton";
+            this.Existbutton.Size = new System.Drawing.Size(171, 42);
+            this.Existbutton.TabIndex = 21;
+            this.Existbutton.Text = "Actualizar Existencias";
+            this.Existbutton.UseVisualStyleBackColor = true;
+            this.Existbutton.Click += new System.EventHandler(this.Existbutton_Click);
             // 
-            // Producto
+            // label2
             // 
-            this.Producto.HeaderText = "Producto";
-            this.Producto.MinimumWidth = 6;
-            this.Producto.Name = "Producto";
-            this.Producto.ReadOnly = true;
-            this.Producto.Width = 125;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(339, 449);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(505, 20);
+            this.label2.TabIndex = 22;
+            this.label2.Text = "Seleccione la cantidad de existencias a modificar e ingrese una nueva aquí:";
             // 
-            // dataGridViewTextBoxColumn1
+            // existxt
             // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "Empaque";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Unidades";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Width = 125;
-            // 
-            // Precio
-            // 
-            this.Precio.HeaderText = "Precio";
-            this.Precio.MinimumWidth = 6;
-            this.Precio.Name = "Precio";
-            this.Precio.ReadOnly = true;
-            this.Precio.Width = 125;
-            // 
-            // Existencias
-            // 
-            this.Existencias.HeaderText = "Existencias";
-            this.Existencias.MinimumWidth = 6;
-            this.Existencias.Name = "Existencias";
-            this.Existencias.ReadOnly = true;
-            this.Existencias.Width = 125;
-            // 
-            // Descripción
-            // 
-            this.Descripción.HeaderText = "Descripción";
-            this.Descripción.MinimumWidth = 6;
-            this.Descripción.Name = "Descripción";
-            this.Descripción.ReadOnly = true;
-            this.Descripción.Width = 125;
+            this.existxt.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.existxt.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.existxt.Location = new System.Drawing.Point(850, 444);
+            this.existxt.Name = "existxt";
+            this.existxt.Size = new System.Drawing.Size(72, 30);
+            this.existxt.TabIndex = 23;
             // 
             // FormProducts
             // 
@@ -241,6 +275,9 @@ namespace Tava.Forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(985, 534);
+            this.Controls.Add(this.existxt);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.Existbutton);
             this.Controls.Add(this.BtnOK);
             this.Controls.Add(this.BtnEliminar);
             this.Controls.Add(this.pictureBox1);
@@ -276,5 +313,8 @@ namespace Tava.Forms
         private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
         private System.Windows.Forms.DataGridViewTextBoxColumn Existencias;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descripción;
+        private System.Windows.Forms.Button Existbutton;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox existxt;
     }
 }
