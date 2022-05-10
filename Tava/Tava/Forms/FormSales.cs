@@ -28,10 +28,10 @@ namespace Tava.Forms
                 foreach (var bill in list)
                 {
                     Client getclid = db.Clients.Where(a => a.Id == bill.ClientId).FirstOrDefault();
-                    var names = getclid.Name +" "+ getclid.Name;
+                    var names = getclid.Name +" "+ getclid.Lastname;
                     Product getproductid = db.Products.Where(a => a.Id == bill.ProductId).FirstOrDefault();
                     Pointofsale gettypeid = db.Pointofsales.Where(a => a.Id == bill.PointofsaleId).FirstOrDefault();
-                    dataGridView1.Rows.Add(bill.Id, bill.Date, names,getproductid.Name,gettypeid.Type,bill.Quantity, bill.Totalprice);
+                    dataGridView1.Rows.Add(bill.Id, bill.Date, names,getproductid.Name,gettypeid.Type,bill.Quantity, "$"+bill.Totalprice);
                 }
             }
         }

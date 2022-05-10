@@ -26,7 +26,7 @@ namespace Tava.Forms
                 var list = db.Products;
                 foreach (var prod in list)
                 {
-                    dataGridView1.Rows.Add(prod.Id, prod.Name, prod.Description, prod.Price);
+                    dataGridView1.Rows.Add(prod.Id, prod.Name,prod.Package,prod.Unitsperset,"$"+prod.Price, prod.Stock, prod.Description);
                 }
             }
         }

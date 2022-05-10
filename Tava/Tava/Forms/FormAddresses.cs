@@ -30,7 +30,7 @@ namespace Tava.Forms
 
                 var pointOfSaleId = values.PointofsaleId;
                 var pointOfSale = context.Pointofsales.Where(b => b.Id == pointOfSaleId).FirstOrDefault();
-                dataGridView1.Rows.Add(values.Id, clientName.Name, pointOfSale.Address);
+                dataGridView1.Rows.Add(values.Id, clientName.Name+" "+clientName.Lastname, pointOfSale.Address);
             }
         }
 

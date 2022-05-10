@@ -16,8 +16,7 @@ namespace Tava.Forms
     {
         //variables for search bar
         public DataTable input;
-        string filterField = "Nombre";
-        int counterid = 1;
+     //   string filterField = "Nombre";
         public FormCustomers()
         {
             InitializeComponent();
