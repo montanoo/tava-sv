@@ -141,7 +141,6 @@ namespace Tava.Views
         private void button2_Click(object sender, EventArgs e)
         {
             // We replace the open form method
-            OpenChildForm(new Forms.FormInventories(), sender);
         }
 
         private void btnProducts_Click(object sender, EventArgs e)
