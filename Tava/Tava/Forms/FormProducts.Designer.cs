@@ -60,10 +60,9 @@ namespace Tava.Forms
             // 
             this.textBox1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBox1.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.textBox1.Location = new System.Drawing.Point(683, 32);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox1.Location = new System.Drawing.Point(781, 43);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(90, 25);
+            this.textBox1.Size = new System.Drawing.Size(102, 30);
             this.textBox1.TabIndex = 6;
             this.textBox1.Text = "Buscar...";
             this.textBox1.Click += new System.EventHandler(this.textBox1_Click);
@@ -73,9 +72,9 @@ namespace Tava.Forms
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(575, 32);
+            this.label1.Location = new System.Drawing.Point(657, 43);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 38);
+            this.label1.Size = new System.Drawing.Size(97, 46);
             this.label1.TabIndex = 5;
             this.label1.Text = "Nombre de\r\n producto:";
             // 
@@ -103,8 +102,7 @@ namespace Tava.Forms
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.Location = new System.Drawing.Point(44, 102);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridView1.Location = new System.Drawing.Point(50, 136);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -120,7 +118,7 @@ namespace Tava.Forms
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.RowTemplate.Height = 29;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(789, 224);
+            this.dataGridView1.Size = new System.Drawing.Size(902, 299);
             this.dataGridView1.TabIndex = 7;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
@@ -176,10 +174,9 @@ namespace Tava.Forms
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(61, 20);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(70, 27);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(82, 54);
+            this.pictureBox1.Size = new System.Drawing.Size(94, 72);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
@@ -187,10 +184,9 @@ namespace Tava.Forms
             // BtnOK
             // 
             this.BtnOK.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.BtnOK.Location = new System.Drawing.Point(789, 32);
-            this.BtnOK.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BtnOK.Location = new System.Drawing.Point(902, 43);
             this.BtnOK.Name = "BtnOK";
-            this.BtnOK.Size = new System.Drawing.Size(44, 25);
+            this.BtnOK.Size = new System.Drawing.Size(50, 33);
             this.BtnOK.TabIndex = 20;
             this.BtnOK.Text = "Ok";
             this.BtnOK.UseVisualStyleBackColor = true;
@@ -228,10 +224,9 @@ namespace Tava.Forms
             // Existbutton
             // 
             this.Existbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.Existbutton.Location = new System.Drawing.Point(705, 339);
-            this.Existbutton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Existbutton.Location = new System.Drawing.Point(806, 452);
             this.Existbutton.Name = "Existbutton";
-            this.Existbutton.Size = new System.Drawing.Size(128, 39);
+            this.Existbutton.Size = new System.Drawing.Size(146, 52);
             this.Existbutton.TabIndex = 21;
             this.Existbutton.Text = "Actualizar Existencias";
             this.Existbutton.UseVisualStyleBackColor = true;
@@ -241,9 +236,9 @@ namespace Tava.Forms
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(44, 339);
+            this.label2.Location = new System.Drawing.Point(50, 452);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(400, 15);
+            this.label2.Size = new System.Drawing.Size(505, 20);
             this.label2.TabIndex = 22;
             this.label2.Text = "Seleccione la cantidad de existencias a modificar e ingrese una nueva aquí:";
             // 
@@ -251,18 +246,17 @@ namespace Tava.Forms
             // 
             this.existxt.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.existxt.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.existxt.Location = new System.Drawing.Point(462, 339);
-            this.existxt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.existxt.Location = new System.Drawing.Point(561, 452);
             this.existxt.Name = "existxt";
-            this.existxt.Size = new System.Drawing.Size(64, 25);
+            this.existxt.Size = new System.Drawing.Size(73, 29);
             this.existxt.TabIndex = 23;
             // 
             // FormProducts
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(862, 400);
+            this.ClientSize = new System.Drawing.Size(985, 533);
             this.Controls.Add(this.existxt);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Existbutton);
@@ -271,7 +265,6 @@ namespace Tava.Forms
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormProducts";
             this.Text = "FormProducts";
             this.Load += new System.EventHandler(this.FormProducts_Load);

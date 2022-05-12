@@ -125,17 +125,23 @@ namespace Tava.Views
             currentButton = null;
             btnCloseChildForm.Visible = false;
         }
+        private void erasehome()
+        {
+            lblTitle.Text = "TAVA";
+        }
 
         private void btnProductsRegistration_Click(object sender, EventArgs e)
         {
             // We replace the open form method
             OpenChildForm(new Forms.FormProductsRegistration(), sender);
+            erasehome();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             // We replace the open form method
            OpenChildForm(new Forms.FormSalesRegistration(user), sender);
+            erasehome();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -147,24 +153,28 @@ namespace Tava.Views
         {
             // We replace the open form method
             OpenChildForm(new Forms.FormProducts(), sender);
+            erasehome();
         }
 
         private void btnSales_Click(object sender, EventArgs e)
         {
            // We replace the open form method
             OpenChildForm(new Forms.FormSales(), sender);
+            erasehome();
         }
 
         private void btnAddresses_Click(object sender, EventArgs e)
         {
             // We replace the open form method
             OpenChildForm(new Forms.FormAddresses(), sender);
+            erasehome();
         }
 
         private void btnCustomers_Click(object sender, EventArgs e)
         {
             // We replace the open form method
             OpenChildForm(new Forms.FormCustomers(), sender);
+            erasehome();
         }
 
         private void btnCloseChildForm_Click_1(object sender, EventArgs e)
