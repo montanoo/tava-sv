@@ -85,5 +85,16 @@ namespace Tava.Forms
                 EmpaqueTxt.Text = "";
             }
         }
+
+        private void NombreTxt_Click(object sender, EventArgs e)
+        {
+            NombreTxt.Text = "";
+        }
+
+        private void DescripcionTxt_Click(object sender, EventArgs e)
+        {
+            DescripcionTxt.Text = "";
+            
+        }
     }
 }

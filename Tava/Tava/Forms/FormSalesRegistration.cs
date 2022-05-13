@@ -155,8 +155,9 @@ namespace Tava.Forms
             textBox2.Text = "";
             textBox3.Text = "";
             textBox6.Text = "";
-            comboBox1.SelectionStart = 0;
+            
             numericUpDown1.Value = 0;
+            comboBox1.Text = "";
             checkBox1.Checked = false;
             checkBox2.Checked = false;
             dateTimePicker1.Value = DateTime.Now;
@@ -229,6 +230,36 @@ namespace Tava.Forms
                 }
             }
             return repetition;
+        }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+
+
+                using (var db = new TavaContext())
+                {
+                    Product productos = new Product();
+                    string producto;
+                    decimal cantidad = 0;
+                    decimal total = 0;
+                    if (comboBox1.Text != "Seleccionar producto" || comboBox1.Text != "")
+                    {
+                        producto = comboBox1.Text;
+                        cantidad = numericUpDown1.Value;
+                        var getprice = db.Products.Where(a => a.Name == producto).FirstOrDefault();
+
+                        total = Convert.ToDecimal(getprice.Price) * cantidad;
+                        totaltxt.Text = total.ToString();
+                    }
+
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show($"{ex}");
+            }
         }
     }
 }

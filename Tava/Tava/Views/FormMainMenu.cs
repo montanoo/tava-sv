@@ -188,5 +188,12 @@ namespace Tava.Views
         {
             Application.Exit();
         }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            Login backtologin = new Login();
+            backtologin.Show();
+            this.Hide();
+        }
     }
 }
